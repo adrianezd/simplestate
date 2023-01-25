@@ -8,7 +8,9 @@ function App() {
   const [imagen, setImagen] = useState(
     "https://developero.io/_next/image?url=%2Fstatic%2Fimages%2Fprincipios-solid-react-js%2FPrincipios-SOLID-en-React-JS.png&w=1200&q=75"
   );
+  var agefield = 0
   const handleSubmit = (e) => {
+    var agefield = document.getElementById("agefield");
     e.preventDefault();
     setEdad(agefield.value);
   };
@@ -23,8 +25,7 @@ function App() {
           "https://developero.io/_next/image?url=%2Fstatic%2Fimages%2Fprincipios-solid-react-js%2FPrincipios-SOLID-en-React-JS.png&w=1200&q=75"
         );
   };
-  
-  var agefield = document.getElementById("agefield");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -45,7 +46,6 @@ function App() {
           <div>
             <p>Mi edad es: {edad}</p>
             <input id="agefield"></input>
-            <br></br>
             <button className="button" onClick={() => setEdad(agefield)}>
               NUEVA EDAD
             </button>
